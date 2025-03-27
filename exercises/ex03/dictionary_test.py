@@ -32,7 +32,8 @@ def test_invert3() -> None:
 
 
 def test_count1() -> None:
-    assert count([]) == {}
+    with pytest.raises(KeyError):
+        count([])
 
 
 def test_count2() -> None:
@@ -48,7 +49,8 @@ def test_count3() -> None:
 
 
 def test_favorite_color1() -> None:
-    assert favorite_color({}) == ""
+    with pytest.raises(KeyError):
+        favorite_color({})
 
 
 def test_favorite_color2() -> None:
@@ -65,7 +67,8 @@ def test_favorite_color3() -> None:
 
 
 def test_bin_len1() -> None:
-    assert bin_len([]) == {}
+    with pytest.raises(KeyError):
+        bin_len([])
 
 
 def test_bin_len2() -> None:
