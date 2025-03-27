@@ -5,6 +5,7 @@ __author__: str = "730548173"
 
 def invert(a: dict[str, str]) -> dict[str, str]:
     """This function inverts the keys and values in my dictionary."""
+
     invert_dict = {}
     for key in a:
         if key in a == key in invert_dict:
@@ -17,6 +18,10 @@ def count(b: list[str]) -> dict[str, int]:
     """This function produces a dictionary where each key is a unique value in the 
     given list and each value associated is the count of the number of times that value 
     appeared in the input list."""
+
+    if not b:
+        raise KeyError("The list is empty")
+
     count_dict = {}
     for value in b:
         if value in count_dict:
@@ -30,6 +35,7 @@ def favorite_color(c:dict[str, str]) -> str:
     """This function returns the color that appears the most frequently in my 
     dictionary. If there is a tie for most popular color, it will return the first 
     color encountered."""
+    
     max_count = 0
     color_count = count(list(c.values()))
     most_frequent = ""
@@ -45,6 +51,10 @@ def bin_len(d:list[str]) -> dict[int, set[str]]:
     """This function bins a list of strings into a dictionary where the key is an int 
     length of a given string and the associated values are a set of strings of the 
     key’s length found in the original list."""
+
+    if not d:
+        raise KeyError("The list is empty")
+
     final_bin = {}
 
     for value in d:
