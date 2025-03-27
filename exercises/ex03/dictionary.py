@@ -8,7 +8,7 @@ def invert(a: dict[str, str]) -> dict[str, str]:
 
     invert_dict = {}
     for key in a:
-        if key in a == key in invert_dict:
+        if a[key] in invert_dict:
             raise KeyError("Duplicate value has been detected")
         invert_dict[a[key]] = key
     return invert_dict
